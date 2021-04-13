@@ -4,6 +4,8 @@ enum ContractStatus {
   Apprentice,
 }
 
-let employeeStatus: ContractStatus = ContractStatus.Temp;
+const employeeStatus: ContractStatus = ContractStatus.Temp;
 console.log(employeeStatus);
 console.log(ContractStatus[employeeStatus]);
+
+const age: any = 'seventeen';
