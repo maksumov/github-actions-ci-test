@@ -1,11 +1,7 @@
-enum ContractStatus {
-  Permanent = 1,
-  Temp,
-  Apprentice,
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function some(a: any) {
+  return a + a;
 }
 
-const employeeStatus: ContractStatus = ContractStatus.Temp;
-console.log(employeeStatus);
-console.log(ContractStatus[employeeStatus]);
-
-const age: any = 'seventeen';
+/* eslint-disable no-console */
+console.log(some(4));
