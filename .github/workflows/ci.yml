@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Check ESLint rules
-        run: npx eslint --no-inline-config --config ./config/.eslintrc.json
+        run: npx eslint --no-inline-config --config ./config/.eslintrc.json ./src
 
       - name: Check if TypeScript compiles
-        run: npx tsc --noEmit --project ./config ./src
+        run: npx tsc --noEmit --project ./config
