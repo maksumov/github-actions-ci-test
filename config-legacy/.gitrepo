@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:rolling-scopes-school/nodejs-course-template.git
+	branch = master
+	commit = 9164bc923c52b0991ef40002e0f9962ad9a52d28
+	parent = 66990f57a3414d44aaeae535610a69591becaa39
+	method = merge
+	cmdver = 0.4.3
