@@ -5,7 +5,7 @@ const YAML = require('yamljs');
 const userRouter = require('./resources/users/user.router');
 
 const app = express();
-const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
+const swaggerDocument = YAML.load(path.join(__dirname, '../public/api.yaml'));
 
 app.use(express.json());
 
