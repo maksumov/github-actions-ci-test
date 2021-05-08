@@ -1,0 +1,16 @@
+name: MD5
+
+on: [pull_request]
+
+jobs:
+  checksum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout commit
+        uses: actions/checkout@v2
+
+      - name: Check md5.yml
+        run: md5sum .github/workflows/md5.yml
+
+      - name: Check ci.yml
+        run: md5sum .github/workflows/ci.yml
