@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-function some(a) {
+function some(a: number) {
   return a + a;
 }
 
