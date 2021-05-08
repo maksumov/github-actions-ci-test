@@ -15,6 +15,9 @@ jobs:
           ref: eslint-config
           path: config
 
+      - name: Check md5
+        run: md5sum .github/workflows/ci.yml
+
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
