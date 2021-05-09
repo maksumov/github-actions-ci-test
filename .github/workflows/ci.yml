@@ -15,6 +15,15 @@ jobs:
           ref: eslint-config
           path: config
 
+      # - name: Check if any TS file exists
+      #   id: checkts
+      #   uses: DovnarAlexander/github-action-file-detection@master
+      #   with:
+      #     wildcard: '*.ts'
+      #     exit_code_found: 0
+      #     exit_code_not_found: 1
+      #     base_path: src
+
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -36,7 +45,7 @@ jobs:
         run: npm ci
 
       - name: Check ESLint rules
-        run: npx eslint --no-inline-config --config ./config/.eslintrc.json ./src
+        run: npx eslint --no-inline-config --config config/.eslintrc.json --ext .js,.ts src
 
       - name: Check if TypeScript compiles
-        run: npx tsc --noEmit --project ./config
+        run: if find src -type f -name *.ts; then npx tsc --noEmit --project config; fi
