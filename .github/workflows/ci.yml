@@ -48,4 +48,4 @@ jobs:
         run: npx eslint --no-inline-config --config config/.eslintrc.json --ext .js,.ts src
 
       - name: Check if TypeScript compiles
-        run: if find src -type f -name *.ts; then npx tsc --noEmit --project config; fi
+        run: if find src -type f -name *.ts | grep .; then npx tsc --noEmit --project config; fi
